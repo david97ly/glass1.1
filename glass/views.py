@@ -63,7 +63,7 @@ def conf(request):
         form = SlideForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect("/")
+            return HttpResponseRedirect("/conf")
     else:
         form = SlideForm()
 
