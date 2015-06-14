@@ -4,8 +4,8 @@ from django.db import models
 class Order(models.Model):
 	 orden= models.CharField(max_length = 10)
 	
-	def __unicode__(self):
-        return "%s " % (self.orden)
+	 def __unicode__(self):
+         return "%s " % (self.orden)
 
 class Fotos(models.Model):
 	nombre = models.CharField(max_length=500)
