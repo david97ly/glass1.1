@@ -88,3 +88,34 @@ def conf(request):
     sl = Slide.objects.all()    
     template = "cofiguraciones.html"
     return render_to_response(template,context_instance=RequestContext(request,locals()))
+    
+    
+def confslide(request):
+    titulo = "Login"
+    c = {'titulo': titulo}
+    return render_to_response('login.html',c)
+
+def confotos(request):
+    titulo = "Login"
+    c = {'titulo': titulo}
+    return render_to_response('login.html',c)
+    
+def confservicios(request):
+    titulo = "Login"
+    c = {'titulo': titulo}
+    return render_to_response('login.html',c)
+    
+def confbanner(request):
+    titulo = "Login"
+    c = {'titulo': titulo}
+    return render_to_response('login.html',c)
+ 
+def confinfo(request):
+    titulo = "Login"
+    c = {'titulo': titulo}
+    return render_to_response('login.html',c)
+
+def confcontactos(request):
+    titulo = "Login"
+    c = {'titulo': titulo}
+    return render_to_response('login.html',c)
