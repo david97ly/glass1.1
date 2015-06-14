@@ -29,12 +29,9 @@ def home(request):
             if s.orden.orden == "Primero":
                 primera = s
                 contador+=1
-            
-             
-            
-               
-        
+      
     return render_to_response(template,context_instance=RequestContext(request,locals()))
+
 
 def servicios(request):
     titulo = "SERVICIOS"

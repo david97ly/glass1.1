@@ -63,6 +63,8 @@
 
        <div class="tab-content">
            <div class="tab-pane fade in active" id="slide">
+             <div class="row">
+              <div class="col-xs-12 col-sm-12 col-dm-12 col-lg-12 ">
              <form class="navbar-form navbar-left" role="search" method="post" enctype="multipart/form-data"> 
                {% csrf_token %}
                  {{form.as_p}}
@@ -70,9 +72,21 @@
                 <input type="submit" value="Guardar" class="form-control" placeholder="Search">
               </div>
                </form>
-                    {% for s in sl %}
-                <img id="ida" class=" img-responsive" src="{{ s.foto.url }}" alt="...">
-                     {% endfor %}
+ 
+                    </div> 
+                   </div>  
+                   
+                    <div class="row">
+                       {% for s in sl %}
+                       <div class="col-xs-12 col-sm-6 col-dm-4 col-lg-4 ">
+                       <h2>{{ s.mensaje }}</h2>  
+                       <h3>{{ s.submensaje }}</h3>  
+                       <input type="checkbox" value="{{s.valida}}">
+                       <img id="ida" class=" img-responsive" src="{{ s.foto.url }}" alt="...">
+                  </div>  
+                    </div> 
+                      {% endfor %}
+                   </div>   
            </div>
            <div class="tab-pane fade" id="mb">
                           <p><span>contenedor 2</span></p>
