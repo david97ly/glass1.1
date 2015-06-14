@@ -3,8 +3,9 @@ from django.db import models
 # Create your models here.
 class Orden(models.Model):
 	orden = models.CharField(max_length = 10)
+	
 	def __unicode__(self):
-        return self.orden
+        return "%s " % (self.orden)
 
 class Fotos(models.Model):
 	nombre = models.CharField(max_length=500)
@@ -43,7 +44,7 @@ class Info(models.Model):
 	foto = models.ImageField(upload_to='photos')
 
 	def __unicode__(self):
-		return self.titulo
+		return "%s " % (self.titulo)
 
 	
 	
@@ -65,4 +66,4 @@ class Servicios(models.Model):
 	foto = models.ImageField(upload_to='photos')
 
 	def __unicode__(self):
-		return self.titulo
+		return "%s " % (self.titulo)
