@@ -1,8 +1,8 @@
 from django.db import models
 
 # Create your models here.
-class Orden(models.Model):
-	orden = models.CharField(max_length = 10)
+class Order(models.Model):
+	 orden= models.CharField(max_length = 10)
 	
 	def __unicode__(self):
         return "%s " % (self.orden)
@@ -19,7 +19,7 @@ class Slide(models.Model):
 	mensaje = models.CharField(max_length=500)
 	submensaje = models.CharField(max_length=500)
 	valida = models.BooleanField(default=False)
-	orden = models.ForeignKey(Orden)
+	orden = models.ForeignKey(Order)
 	foto = models.ImageField(upload_to='photos')
 
 	def __unicode__(self):
@@ -40,7 +40,7 @@ class Info(models.Model):
 	subtitulo = models.CharField(max_length=500)
 	informacion = models.TextField(max_length=100)
 	valida = models.BooleanField(default=False)
-	orden = models.ForeignKey(Orden)
+	orden = models.ForeignKey(Order)
 	foto = models.ImageField(upload_to='photos')
 
 	def __unicode__(self):
