@@ -115,7 +115,7 @@ def confinfo(request):
     c = {'titulo': titulo}
     return render_to_response('login.html',c)
 
-def confcontactos(request):
+def confcontacto(request):
     titulo = "Login"
     c = {'titulo': titulo}
     return render_to_response('login.html',c)
