@@ -10,7 +10,7 @@ from django.contrib.auth.decorators import login_required
 
 def home(request):
     titulo = "Master AutoGlass"
-    template = "cofiguraciones.html"
+    template = "home.html"
     slider = Slide.objects.all()
     primera =""
     segunda = ""
