@@ -13,6 +13,9 @@ class Fotos(models.Model):
 	ruta = models.ImageField(upload_to='photos')
 	valida = models.BooleanField(default=False)
 
+	def __unicode__(self):
+		return self.nombre
+
 
 class Slide(models.Model):
 	mensaje = models.CharField(max_length=500)
@@ -21,11 +24,17 @@ class Slide(models.Model):
 	orden = models.ForeignKey(Order)
 	foto = models.ImageField(upload_to='photos')
 
+	def __unicode__(self):
+		return "%s - %s " % (self.mensaje,self.submensaje)
+
 			
 class Mensajeb(models.Model):
 	mensaje = models.CharField(max_length=500)
 	submensaje = models.CharField(max_length=500)
 	valida = models.BooleanField(default=False)
+
+	def __unicode__(self):
+		return "%s - %s " % (self.mensaje,self.submensaje)
 	
 	
 class Info(models.Model):
@@ -36,6 +45,9 @@ class Info(models.Model):
 	orden = models.ForeignKey(Order)
 	foto = models.ImageField(upload_to='photos')
 
+	def __unicode__(self):
+		return "%s " % (self.titulo)
+
 	
 class Contactos(models.Model):
 	telefono1 = models.CharField(max_length=500)
@@ -44,11 +56,17 @@ class Contactos(models.Model):
 	fax = models.CharField(max_length=500)
 	address = models.CharField(max_length=500)
 
+	def __unicode__(self):
+		return "%s - %s " % (self.telefono1,self.correo)
+
 	
 class Servicios(models.Model):
 	titulo = models.CharField(max_length=500)
 	informacion = models.TextField(max_length=100)
 	valida = models.BooleanField(default=False)
 	foto = models.ImageField(upload_to='photos')
+
+	def __unicode__(self):
+		return "%s " % (self.titulo)
 
 	
