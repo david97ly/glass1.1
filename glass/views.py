@@ -4,7 +4,7 @@ from django.template import Context
 from django.template.context import RequestContext
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render_to_response,redirect
-from forms import *
+#from forms import *
 from django.contrib.auth.decorators import login_required
 
 def home(request):
