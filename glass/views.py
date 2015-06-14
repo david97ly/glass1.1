@@ -25,7 +25,7 @@ def home(request):
             elif s.orden.orden =="Segundo":
                 segundo = s
                 contador=contador + 1
-            else s.orden.orden == "Tercero":
+            else:
                 tercera = s
                 contador=contador + 1
         
