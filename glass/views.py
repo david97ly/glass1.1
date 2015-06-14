@@ -67,6 +67,6 @@ def conf(request):
     else:
         form = SlideForm()
 
-    sl = Slide.objects.get(id=1)    
+    sl = Slide.objects.all()    
     template = "cofiguraciones.html"
     return render_to_response(template,context_instance=RequestContext(request,locals()))
