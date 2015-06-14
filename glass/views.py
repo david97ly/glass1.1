@@ -21,16 +21,13 @@ def home(request):
         if s.valida:
             if s.orden.orden == "Primero":
                 primera = s
-                contador ++
+                contador=contador + 1
             elif s.orden.orden =="Segundo":
                 segundo = s
-                contador ++
+                contador=contador + 1
             else s.orden.orden == "Tercero":
                 tercera = s
-                contador ++
-    
-                
-                    
+                contador=contador + 1
         
     return render_to_response(template,,context_instance=RequestContext(request,locals()))
 
