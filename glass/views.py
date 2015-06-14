@@ -9,11 +9,30 @@ from forms import *
 from django.contrib.auth.decorators import login_required
 
 def home(request):
-    hola="here"
-    nombrep="Esta es otra prueba"
-    compania = "Master auto Glass"
-    c = {'hola':hola,'nombre':nombrep,'compa':compania,}
-    return render_to_response('home.html',c)
+    titulo = "Master AutoGlass"
+    template = "cofiguraciones.html"
+    slider = Slide.objects.all()
+    primera =""
+    segunda = ""
+    tercera = ""
+    contador = 0 
+    
+    for s in slider:
+        if s.valida:
+            if s.orden.orden == "Primero":
+                primera = s
+                contador ++
+            elif s.orden.orden =="Segundo":
+                segundo = s
+                contador ++
+            else s.orden.orden == "Tercero":
+                tercera = s
+                contador ++
+    
+                
+                    
+        
+    return render_to_response(template,,context_instance=RequestContext(request,locals()))
 
 def servicios(request):
     titulo = "SERVICIOS"
