@@ -24,7 +24,7 @@ def home(request):
                 tercera = s
                 contador+=1
             if s.orden.orden == "Segundo":
-                segundo = s
+                segunda = s
                 contador+=1
             if s.orden.orden == "Primero":
                 primera = s
