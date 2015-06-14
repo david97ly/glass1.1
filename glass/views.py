@@ -22,11 +22,13 @@ def home(request):
             if s.orden.orden == "Tercero":
                 tercera = s
                 
+            if s.orden.orden == "Segundo":
+                segundo = s
+                
             if s.orden.orden == "Primero":
                 primera = s
                 
-            if s.orden.orden == "Segundo":
-                segundo = s
+            
              
             
                
