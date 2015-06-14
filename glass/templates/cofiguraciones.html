@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+  <html>
+  <head lang="es">
+    <meta charset="UTF-8">
+    <title>{{nombre}}</title>
+     {% load static from staticfiles  %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/static/boot/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="{% static "configuraciones.css" %}">
+    <link rel="shortcut icon" type="image/x-icon" href="../static/imagenes/icono/credit-cards.ico" />
+     <style type="text/css">
+      
+    
+     </style>
+     <script type="text/javascript">
+      
+     </script>
+  </head>
+    <body>
+
+  <div class="navbar-wrapper">
+      <div class="container-fluit">
+
+        <div class="navbar navbar-inverse navbar-static-top">
+          <div class="container"> 
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+             <!-- <a class="navbar-brand" href="#">{{compa}} </a> 
+-->
+               <img src="/static/imagenes/banner/logo1.png"  alt="Brand" class="pull-left"  id="imglogo">
+            </div>
+            <div class="navbar-collapse collapse" id="menus">
+             <ul class="nav navbar-nav pull-right">
+                  <li><a href="/"><span class="glyphicon glyphicon-home">Inicio</span></a></li>
+                  <li><a href="/servicios"><span class="glyphicon glyphicon-info-sign">Servicios</span></a></li>
+                  <li><a href="/ubicacion"><span class="glyphicon glyphicon-map-marker">Ubicacion</span></a></li>
+                  <li><a href="/fotos"><span class="glyphicon glyphicon-picture">Fotos</span></a></li>
+                  <li><a href="/contacto"><span class="glyphicon glyphicon-phone-alt">Contactenos</span></a></li>
+                  <li><a href="/quienes"><span class="glyphicon glyphicon-question-sign">Quienes somos   {{request.user}}</span></a></li>
+               </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+     <div class="container" id="contenedor">
+       
+       
+       <ul class="nav nav-tabs">
+            <li role="presentation" class="active"><a href="#slide" data-toggle="tab">Slide</a></li>
+            <li role="presentation"><a href="#mb" data-toggle="tab">Mensaje Banner</a></li>
+            <li role="presentation"><a href="#info" data-toggle="tab">Informacion</a></li>
+            <li role="presentation"><a href="#conta" data-toggle="tab">Contactos</a></li>
+            <li role="presentation"><a href="#servi" data-toggle="tab">Servicios</a></li>
+            <li role="presentation"><a href="#fotos" data-toggle="tab">Fotos</a></li>
+      </ul>
+
+       <div class="tab-content">
+           <div class="tab-pane fade in active" id="slide">
+             <form class="navbar-form navbar-left" role="search" method="post" enctype="multipart/form-data"> 
+               {% csrf_token %}
+                 {{form.as_p}}
+              <div class="form-group">
+                <input type="submit" value="Guardar" class="form-control" placeholder="Search">
+              </div>
+               </form>
+                      
+                <img id="ida" class=" img-responsive" src="{{ sl }}" alt="...">
+                  
+           </div>
+           <div class="tab-pane fade" id="mb">
+                          <p><span>contenedor 2</span></p>
+           </div>
+           <div class="tab-pane fade" id="info">
+                          <p><span>contenedor 3</span></p>
+           </div>
+           <div class="tab-pane fade" id="conta">
+                          <p><span>contenedor 4</span></p>
+           </div>
+           <div class="tab-pane fade" id="servi">
+                          <p><span>contenedor 5</span></p>
+           </div>
+           <div class="tab-pane fade" id="fotos">
+                          <p><span>contenedor 6</span></p>
+           </div>
+       </div>
+       
+     </div>
+       
+    
+   
+
+      
+    <script src="/static/js/jquery-1.2.6.min.js"></script>
+    <script src="/static/js/ajax.js"></script>
+    <script src="/static/boot/js/bootstrap.js" type="text/javascript"></script>
+
+  </body>
+</html>
