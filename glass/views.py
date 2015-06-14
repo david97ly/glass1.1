@@ -19,14 +19,16 @@ def home(request):
     
     for s in slider:
         if s.valida:
+            if s.orden.orden == "Tercero":
+                tercera = s
+                
             if s.orden.orden == "Primero":
                 primera = s
                 
-            if s.orden.orden =="Segundo":
+            if s.orden.orden == "Segundo":
                 segundo = s
              
-            if s.orden.orden == "Tercero":
-                tercera = s
+            
                
         
     return render_to_response(template,context_instance=RequestContext(request,locals()))
