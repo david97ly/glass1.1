@@ -3,6 +3,9 @@ from django.db import models
 # Create your models here.
 class Order(models.Model):
     orden = models.CharField(max_length = 10)
+
+    def __unicode__(self):
+        return "%s " % (self.orden)
 	
 
 class Fotos(models.Model):
