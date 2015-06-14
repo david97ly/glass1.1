@@ -19,6 +19,7 @@ def home(request):
     
     for s in slider:
         if s.valida:
+            contador+=1
             if s.orden.orden == "Tercero":
                 tercera = s
                 
