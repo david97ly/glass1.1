@@ -29,7 +29,7 @@ def home(request):
                 tercera = s
                 contador=contador + 1
         
-    return render_to_response(template,,context_instance=RequestContext(request,locals()))
+    return render_to_response(template,context_instance=RequestContext(request,locals()))
 
 def servicios(request):
     titulo = "SERVICIOS"
