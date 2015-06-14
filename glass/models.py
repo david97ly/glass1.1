@@ -2,18 +2,14 @@ from django.db import models
 
 # Create your models here.
 class Order(models.Model):
-    orden= models.CharField(max_length = 10)
+    orden = models.CharField(max_length = 10)
 	
-	def __unicode__(self):
-        return "%s " % (self.orden)
 
 class Fotos(models.Model):
 	nombre = models.CharField(max_length=500)
 	ruta = models.ImageField(upload_to='photos')
 	valida = models.BooleanField(default=False)
 
-	def __unicode__(self):
-		return self.nombre
 
 class Slide(models.Model):
 	mensaje = models.CharField(max_length=500)
@@ -22,18 +18,12 @@ class Slide(models.Model):
 	orden = models.ForeignKey(Order)
 	foto = models.ImageField(upload_to='photos')
 
-	def __unicode__(self):
-		return "%s - %s " % (self.mensaje,self.submensaje)
-	
-
-		
+			
 class Mensajeb(models.Model):
 	mensaje = models.CharField(max_length=500)
 	submensaje = models.CharField(max_length=500)
 	valida = models.BooleanField(default=False)
-
-	def __unicode__(self):
-		return "%s - %s " % (self.mensaje,self.submensaje)
+	
 	
 class Info(models.Model):
 	titulo = models.CharField(max_length=500)
@@ -43,10 +33,6 @@ class Info(models.Model):
 	orden = models.ForeignKey(Order)
 	foto = models.ImageField(upload_to='photos')
 
-	def __unicode__(self):
-		return "%s " % (self.titulo)
-
-	
 	
 class Contactos(models.Model):
 	telefono1 = models.CharField(max_length=500)
@@ -55,9 +41,6 @@ class Contactos(models.Model):
 	fax = models.CharField(max_length=500)
 	address = models.CharField(max_length=500)
 
-	def __unicode__(self):
-		return "%s - %s " % (self.telefono1,self.correo)
-	
 	
 class Servicios(models.Model):
 	titulo = models.CharField(max_length=500)
@@ -65,5 +48,4 @@ class Servicios(models.Model):
 	valida = models.BooleanField(default=False)
 	foto = models.ImageField(upload_to='photos')
 
-	def __unicode__(self):
-		return "%s " % (self.titulo)
+	
