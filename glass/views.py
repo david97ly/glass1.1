@@ -19,16 +19,16 @@ def home(request):
     
     for s in slider:
         if s.valida:
-            contador+=1
+            
             if s.orden.orden == "Tercero":
                 tercera = s
-                
+                contador+=1
             if s.orden.orden == "Segundo":
                 segundo = s
-                
+                contador+=1
             if s.orden.orden == "Primero":
                 primera = s
-                
+                contador+=1
             
              
             
