@@ -23,6 +23,7 @@ class Slide(models.Model):
 	valida = models.BooleanField(default=False)
 	orden = models.ForeignKey(Order)
 	foto = models.ImageField(upload_to='photos')
+	
 
 	def __unicode__(self):
 		return "%s - %s " % (self.mensaje,self.submensaje)
@@ -32,6 +33,7 @@ class Mensajeb(models.Model):
 	mensaje = models.CharField(max_length=500)
 	submensaje = models.CharField(max_length=500)
 	valida = models.BooleanField(default=False)
+	foto = models.ImageField(upload_to='photos')
 
 	def __unicode__(self):
 		return "%s - %s " % (self.mensaje,self.submensaje)
