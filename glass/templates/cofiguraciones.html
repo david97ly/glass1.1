@@ -69,12 +69,7 @@
                    
             
                        {% for s in sl %}
-                  
-         
-        
-        
-        
-        
+ 
             <!-- Carousel
     ================================================== -->
     <div id="myCarousel" class="carousel slide visible-lg visible-md">
@@ -84,18 +79,18 @@
       
       </ol>
       <div class="carousel-inner">
-           {% if primera != "" %}
+          
         <div class="item active">
-          <img id="imgs" src="{{ primera.foto.url }}" data-src="holder.js/100%x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
+          <img id="imgs" src="{{ s.foto.url }}" data-src="holder.js/100%x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>{{ primera.mensaje }}</h1>
-              <p>{{ primera.submensaje }}</p>
+              <h1>{{ s.mensaje }}</h1>
+              <p>{{ s.submensaje }}</p>
               <p><a class="btn btn-large btn-primary " id="vdetalle1" href="#" >Sign up today</a></p>
             </div>
           </div>
         </div>
-        {% endif %}      
+    
  
       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
