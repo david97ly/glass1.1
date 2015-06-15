@@ -88,18 +88,7 @@ def conf(request):
     template = "cofiguraciones.html"
     return render_to_response(template,context_instance=RequestContext(request,locals()))
     
-@login_required
-def editsl(request,idsl):
-    if request.method == 'POST':
-        form = SlideForm(request.POST,request.FILES, instance=idsl)
-        if form.is_valid():
-            form.save()
-            return HttpResponseRedirect("/confslide")
-    else:
-        template = "cofiguraciones.html"
-        form = SlideForm(instance=idsl)
-        return render_to_response(template,context_instance=RequestContext(request,locals()))
-    
+
 def confslide(request):
     idicador = 0
     sl = Slide.objects.all()    
