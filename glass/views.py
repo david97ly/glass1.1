@@ -88,7 +88,7 @@ def conf(request):
     template = "cofiguraciones.html"
     return render_to_response(template,context_instance=RequestContext(request,locals()))
     
-
+@login_required
 def confslide(request):
     idicador = 0
     sl = Slide.objects.all()    
