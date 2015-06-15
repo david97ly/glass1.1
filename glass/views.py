@@ -89,6 +89,20 @@ def conf(request,id_indicador=0):
     template = "cofiguraciones.html"
     return render_to_response(template,context_instance=RequestContext(request,locals()))
     
+@login_required
+def conf(request):
+    if request.POST:
+        form = SlideForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/conf")
+    else:
+        form = SlideForm()
+
+    sl = Slide.objects.all()    
+    template = "cofiguraciones.html"
+    return render_to_response(template,context_instance=RequestContext(request,locals()))
+    
     
 def confslide(request):
     titulo = "Login"
