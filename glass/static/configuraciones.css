@@ -135,16 +135,20 @@
   }
   
     @media (max-width: 768px) {
-   
+   body{
+         background-color: red;
+   }
   .orden {
- 
+  position: fixed;
+  
 }
  .orden{
-
+  text-shadow: none;
 }
 
  .orden {
-
+    right: 1%;
+    
   }
 
       }
