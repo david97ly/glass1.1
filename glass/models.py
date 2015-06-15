@@ -42,7 +42,7 @@ class Mensajeb(models.Model):
 class Info(models.Model):
 	titulo = models.CharField(max_length=500)
 	subtitulo = models.CharField(max_length=500)
-	informacion = models.TextField(max_length=100)
+	informacion = models.TextField(max_length=20000,null=True)
 	valida = models.BooleanField(default=False)
 	orden = models.ForeignKey(Order)
 	foto = models.ImageField(upload_to='photos')
