@@ -50,18 +50,8 @@
     </div>
 
      <div class="container" id="contenedor">
-       
-       
-       <ul class="nav nav-tabs">
-            <li role="presentation" class="active"><a href="#slide" data-toggle="tab">Slide</a></li>
-            <li role="presentation"><a href="#mb" data-toggle="tab">Mensaje Banner</a></li>
-            <li role="presentation"><a href="#info" data-toggle="tab">Informacion</a></li>
-            <li role="presentation"><a href="#conta" data-toggle="tab">Contactos</a></li>
-            <li role="presentation"><a href="#servi" data-toggle="tab">Servicios</a></li>
-            <li role="presentation"><a href="#fotos" data-toggle="tab">Fotos</a></li>
-      </ul>
 
-       <div class="tab-content">
+
            <div class="row">
            <div class="tab-pane fade in active" id="slide">
              <div class="row">
@@ -77,44 +67,45 @@
                     </div> 
                    </div>  
                    
-              <div class="carousel-inner">
+            
                        {% for s in sl %}
                   
-                    
-           <div class="item">
-          <img id="ida" src="{{ s.foto.url }}" data-src="holder.js/100%x500/auto/#777:#7a7a7a/text:Third slide" alt="Third slide">
+         
+        
+        
+        
+        
+            <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide visible-lg visible-md">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      
+      </ol>
+      <div class="carousel-inner">
+           {% if primera != "" %}
+        <div class="item active">
+          <img id="imgs" src="{{ primera.foto.url }}" data-src="holder.js/100%x500/auto/#777:#7a7a7a/text:First slide" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-             <h1>{{ s.mensaje }}</h1>
-              <p>{{ s.submensaje }}</p>
-              <p><a class="btn btn-large btn-primary" href="#" id="vdetalle1">Browse gallery</a></p>
+              <h1>{{ primera.mensaje }}</h1>
+              <p>{{ primera.submensaje }}</p>
+              <p><a class="btn btn-large btn-primary " id="vdetalle1" href="#" >Sign up today</a></p>
             </div>
           </div>
         </div>
-                      {% endfor %} 
-                      </div>
-                   </div> 
-                 </div>    
-           </div>
-           <div class="tab-pane fade" id="mb">
-                          <p><span>contenedor 2</span></p>
-           </div>
-           <div class="tab-pane fade" id="info">
-                          <p><span>contenedor 3</span></p>
-           </div>
-           <div class="tab-pane fade" id="conta">
-                          <p><span>contenedor 4</span></p>
-           </div>
-           <div class="tab-pane fade" id="servi">
-                          <p><span>contenedor 5</span></p>
-           </div>
-           <div class="tab-pane fade" id="fotos">
-                          <p><span>contenedor 6</span></p>
-           </div>
+        {% endif %}      
+ 
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
+   {% endfor %} 
+                   
        </div>
        
      </div>
-       
+       </div>
     
    
 
