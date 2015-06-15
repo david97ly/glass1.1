@@ -136,10 +136,10 @@
   
     @media (max-width: 768px) {
    body{
-         background-color: red;
+         background-color:blue;
    }
   .orden {
-  position: fixed;
+ text-shadow: none;
   
 }
  .orden{
@@ -147,7 +147,7 @@
 }
 
  .orden {
-    right: 1%;
+    text-shadow: none;
     
   }
 
