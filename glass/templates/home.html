@@ -43,6 +43,11 @@
                   <li><a href="/fotos"><span class="glyphicon glyphicon-picture">Fotos</span></a></li>
                   <li><a href="/contacto"><span class="glyphicon glyphicon-phone-alt">Contactenos</span></a></li>
                   <li><a href="/quienes"><span class="glyphicon glyphicon-question-sign">Quienes somos</span></a></li>
+                  
+                  {% if request.user.is_authenticated %}
+                   <li><a href="/conf"><span class="glyphicon glyphicon-question-sign">Conf</span></a></li>
+                  {% endif %}
+                  
                </ul>
             </div>
           </div>
