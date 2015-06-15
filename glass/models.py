@@ -64,7 +64,7 @@ class Contactos(models.Model):
 	
 class Servicios(models.Model):
 	titulo = models.CharField(max_length=500)
-	informacion = models.TextField(max_length=100)
+	informacion = models.TextField(max_length=20000,null=True)
 	valida = models.BooleanField(default=False)
 	foto = models.ImageField(upload_to='photos')
 
