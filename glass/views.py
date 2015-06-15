@@ -76,8 +76,7 @@ def login(request):
     
     
 @login_required
-def conf(request,iddent):
-    idicador = iddent
+def conf(request):
     if request.POST:
         form = SlideForm(request.POST, request.FILES)
         if form.is_valid():
@@ -89,6 +88,17 @@ def conf(request,iddent):
     template = "cofiguraciones.html"
     return render_to_response(template,context_instance=RequestContext(request,locals()))
     
+@login_required
+def editsl(request,idsl):
+    if request.method == 'POST':
+        form = SlideForm(request.POST,request.FILES, instance=idsl)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect("/confslide")
+    else:
+        template = "cofiguraciones.html"
+        form = SlideForm(instance=idsl)
+        return render_to_response(template,context_instance=RequestContext(request,locals()))
     
 def confslide(request):
     idicador = 0
