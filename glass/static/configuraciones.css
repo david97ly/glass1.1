@@ -181,7 +181,7 @@
          background-color: red;
    }
   .orden {
- text-shadow: none;
+  position: static;
   
 }
  .orden{
