@@ -30,10 +30,10 @@ class Slide(models.Model):
 
 			
 class Mensajeb(models.Model):
-	mensaje = models.CharField(max_length=500, default = "")
-	submensaje = models.CharField(max_length=500,default = "")
+	mensaje = models.CharField(max_length=500)
+	submensaje = models.CharField(max_length=500)
 	valida = models.BooleanField(default=False)
-	foto = models.ImageField(upload_to='photos')
+	foto = models.ImageField(upload_to='photos',null = True)
 
 	def __unicode__(self):
 		return "%s - %s " % (self.mensaje,self.submensaje)
