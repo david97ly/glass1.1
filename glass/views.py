@@ -76,13 +76,13 @@ def login(request):
     
     
 @login_required
-def conf(request):
-    indicador = 1
+def conf(request,indi):
+    indicador = indi
     if request.POST:
         form = SlideForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            indicador = 1
+            indicador = 0
             return HttpResponseRedirect("/conf")
     else:
         form = SlideForm()
