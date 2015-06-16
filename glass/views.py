@@ -84,6 +84,7 @@ def conf(request):
             return HttpResponseRedirect("/confslide")
     else:
         form = SlideForm()
+        sl = Slide.objects.all()  
     
     template = "confslide.html"
     return render_to_response(template,context_instance=RequestContext(request,locals()))
