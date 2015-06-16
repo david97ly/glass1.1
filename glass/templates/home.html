@@ -45,7 +45,7 @@
                   <li><a href="/quienes"><span class="glyphicon glyphicon-question-sign">Quienes somos</span></a></li>
                   
                   {% if request.user.is_authenticated %}
-                   <li><a href="/confslide"><span class="glyphicon glyphicon-question-sign">Conf</span></a></li>
+                   <li><a href="{% url "confslide" %}"><span class="glyphicon glyphicon-question-sign">Conf</span></a></li>
                   {% endif %}
                   
                </ul>
