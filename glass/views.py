@@ -91,10 +91,10 @@ def conf(request):
     
 @login_required
 def confslide(request):
-    idicador = 0
     sl = Slide.objects.all()    
+    c = {'sl':sl}
     template = "confslide.html"
-    return render_to_response(template,context_instance=RequestContext(request,locals()))
+    return render_to_response(template,c)
 
 def confotos(request):
     titulo = "Login"
