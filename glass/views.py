@@ -83,7 +83,7 @@ def conf(request,indi=0):
         if form.is_valid():
             form.save()
             indicador = 0
-            return HttpResponseRedirect("/conf/idicador")
+            return HttpResponseRedirect("/conf/0")
     else:
         form = SlideForm()
         sl = Slide.objects.all()  
