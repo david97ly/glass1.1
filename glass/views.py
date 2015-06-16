@@ -82,7 +82,7 @@ def conf(request):
         if form.is_valid():
             form.save()
             indicador = 0
-            return HttpResponseRedirect("/confslide)
+            return HttpResponseRedirect("/confslide")
     else:
         form = SlideForm()
     template = "cofiguraciones.html"
