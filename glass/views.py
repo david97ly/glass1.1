@@ -77,7 +77,7 @@ def login(request):
     
 @login_required
 def conf(request):
-    indicador = 0
+    indicador = 1
     if request.POST:
         form = SlideForm(request.POST, request.FILES)
         if form.is_valid():
