@@ -77,24 +77,20 @@ def login(request):
     
 @login_required
 def conf(request):
+    indicador = 0
     if request.POST:
         form = SlideForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect("/confslide")
+            indicador = 1
+            return HttpResponseRedirect("/conf")
     else:
         form = SlideForm()
         sl = Slide.objects.all()  
     
     template = "cofiguraciones.html"
     return render_to_response(template,context_instance=RequestContext(request,locals()))
-    
-@login_required
-def confslide(request):
-    sl = Slide.objects.all()    
-    c = {'sl':sl}
-    template = "confslide.html"
-    return render_to_response(template,c)
+   
 
 def confotos(request):
     titulo = "Login"
