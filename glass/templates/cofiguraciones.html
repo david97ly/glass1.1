@@ -79,8 +79,8 @@
       
            <!--      <div id="carru" class="col-lg-8 col-md-8 col-sm-8 col-xs-12 container"> -->
            <div id="carru" class="container">
- 
-              <p><a class="btn btn-large btn-primary " id="new" href="" >Agregar nuevo Slider</a></p>
+              <button class="btn btn-large btn-primary " id="new">Agregar nuevo Slider</button>
+           <!--    <p><a class="btn btn-large btn-primary " id="new" href="" >Agregar nuevo Slider</a></p>-->
                
                        {% for s in sl %}
     <br>
@@ -128,7 +128,7 @@
     <script>
       
       
-      $(document).on('ready',function() {
+      $(document).on('ready',function(){
         
         $('#new').on('click',mostrarform);
         
