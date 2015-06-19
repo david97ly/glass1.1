@@ -65,7 +65,7 @@
                {% csrf_token %}
                  {{form.as_p}}
               <div class="form-group">
-                <input type="submit" id="cance" value="Guardar" class="form-control" placeholder="Search">
+                <input type="submit" id="guarda" value="Guardar" class="form-control" placeholder="Search">
               </div>
                </form>
                 </div>
@@ -131,7 +131,8 @@
       $(document).on('ready',function(){
         
         $('#new').on('click',mostrarform);
-         $('#new').on('click',ocultarform);
+         $('#cance').on('click',ocultarform);
+          $('#guarda').on('click',ocultarform);
         var apli = {
             'display': 'none'
         }
