@@ -65,7 +65,7 @@
                {% csrf_token %}
                  {{form.as_p}}
               <div class="form-group">
-                <input type="submit" value="Guardar" class="form-control" placeholder="Search">
+                <input type="submit" id="cance" value="Guardar" class="form-control" placeholder="Search">
               </div>
                </form>
                 </div>
@@ -131,7 +131,7 @@
       $(document).on('ready',function(){
         
         $('#new').on('click',mostrarform);
-        
+         $('#new').on('click',ocultarform);
         var apli = {
             'display': 'none'
         }
@@ -140,9 +140,19 @@
           'display': 'block'
         }
          $('#formu').css(apli);
+         $('#cance').css(apli);
          function mostrarform(){
                 $('#formu').css(apli1);
-                alert("ahorita se oculta");
+                $('#cance').css(apli1);
+                 $('#new').css(apli);
+              }
+              
+              
+              
+         function ocultarform(){
+                $('#formu').css(apli);
+                $('#cance').css(apli);
+                 $('#new').css(apli1);
               }
       })
       
